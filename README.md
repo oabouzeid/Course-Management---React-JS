@@ -1,16 +1,184 @@
-# React + Vite
+# 📚 Course Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and clean React application for managing courses.
+You can easily **add, edit, and delete courses** through a simple and user-friendly interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Overview
 
-## React Compiler
+**Course Management** is a lightweight web application built with React that allows users to manage course data efficiently.
+It demonstrates core front-end concepts such as:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* State Management
+* Component Communication
+* Form Handling
+* Controlled & Uncontrolled Inputs
 
-## Expanding the ESLint configuration
+The project is simple, scalable, and can be extended into a full-stack system.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+* ➕ Add new courses
+* ✏️ Edit existing courses
+* 🗑️ Delete courses
+* 📊 Display courses in a responsive table
+* ✅ Support for free/paid courses
+* ⚡ Fast UI using Tailwind CSS
+
+---
+
+## 🛠️ Tech Stack
+
+* **React.js**
+* **JavaScript (ES6+)**
+* **Tailwind CSS**
+* **React Hooks (useState, useEffect, useRef)**
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── components/
+│   ├── CourseForm.jsx      # Form for adding/editing courses
+│   ├── CourseTable.jsx     # Table for displaying courses
+│
+├── pages/
+│   └── Home.jsx            # Main container (logic & state)
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ How It Works
+
+### 🔹 Add Course
+
+* Fill in the form
+* Click "Add New Course"
+* Course appears instantly in the table
+
+### 🔹 Edit Course
+
+* Click "Edit"
+* Form gets auto-filled
+* Update and submit
+
+### 🔹 Delete Course
+
+* Click "Delete"
+* Course is removed immediately
+
+---
+
+## ⚡ Controlled vs Uncontrolled Components
+
+This project demonstrates both approaches in React forms.
+
+---
+
+### 🔹 Controlled Components
+
+Inputs managed by React state.
+
+#### Example:
+
+```
+const [courseName, setCourseName] = useState("");
+
+<input
+  value={courseName}
+  onChange={(e) => setCourseName(e.target.value)}
+/>
+```
+
+#### ✅ Pros:
+
+* Full control over data
+* Easy validation
+* Predictable behavior
+
+#### ❌ Cons:
+
+* More code
+* More re-renders
+
+---
+
+### 🔹 Uncontrolled Components
+
+Inputs managed by the DOM using `useRef`.
+
+#### Example:
+
+```
+const quantityRef = useRef();
+
+<input ref={quantityRef} />
+```
+
+#### Access value:
+
+```
+quantityRef.current.value
+```
+
+#### ✅ Pros:
+
+* Simpler code
+* Better performance in simple cases
+
+#### ❌ Cons:
+
+* Harder validation
+* Less control over inputs
+
+---
+
+## 🧑‍💻 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/course-management.git
+
+# Navigate to project folder
+cd course-management
+
+# Install dependencies
+npm install
+
+# Run the app
+npm run dev
+```
+
+---
+
+## 📸 Screenshots
+
+> Add your screenshots here 👇
+
+<img width="1904" height="971" alt="image" src="https://github.com/user-attachments/assets/9f0d600d-1b57-4a52-8c24-56984ea1ad84" />
+
+---
+
+## 📌 Future Improvements
+
+* 🔗 Connect to Backend (Node.js / Express / Firebase)
+* 🔍 Add search & filtering
+* 📄 Add pagination
+* 🔐 Authentication system
+* 💾 Persist data in database
+
+---
+
+## 👨‍💻 Author
+
+**Omar**
+Flutter & MERN Stack Developer 🚀
