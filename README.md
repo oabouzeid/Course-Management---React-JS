@@ -47,9 +47,7 @@ src/
 ├── components/
 │   ├── CourseForm.jsx      # Form for adding/editing courses
 │   ├── CourseTable.jsx     # Table for displaying courses
-│
-├── pages/
-│   └── Home.jsx            # Main container (logic & state)
+│   └── Home.jsx            # Main container (logic & state)  
 │
 ├── App.jsx
 └── main.jsx
